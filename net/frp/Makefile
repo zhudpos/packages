@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=frp
-PKG_VERSION:=0.51.3
+PKG_VERSION:=0.53.2
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/fatedier/frp/tar.gz/v${PKG_VERSION}?
-PKG_HASH:=83032399773901348c660d41c967530e794ab58172ccd070db89d5e50d915fef
+PKG_HASH:=ff2a4f04e7732bc77730304e48f97fdd062be2b142ae34c518ab9b9d7a3b32ec
 
 PKG_LICENSE:=Apache-2.0
 PKG_LICENSE_FILES:=LICENSE
@@ -21,7 +21,7 @@ PKG_MAINTAINER:=Xingwang Liao <kuoruan@gmail.com>
 
 PKG_BUILD_DEPENDS:=golang/host upx/host
 PKG_BUILD_PARALLEL:=1
-PKG_BUILD_FLAGS:=no-mips16
+PKG_USE_MIPS16:=0
 
 GO_PKG:=github.com/fatedier/frp
 GO_PKG_BUILD_PKG:=github.com/fatedier/frp/cmd/...
